@@ -1,13 +1,4 @@
 var fs=require("fs");
-var data=fs.readFileSync('input.txt');
-console.log(data.toString());
-console.log("异步读取文件结束");
-
-fs.readFile('input.txt',function(err,data){
-    if(err) return console.error(err);
-    console.log(data.toString());
-});
-console.log("不需要等待读取文件执行结束，再执行这层");
 ////创建可读流
 var readdata='';
 //创建可读流
@@ -57,5 +48,3 @@ console.log("压缩文件完成");
 //  .pipe(zlib.createGunzip())
 //  .pipe(fs.createWriteStream('input.txt'));
 //console.log("解压文件完成");
-
-
